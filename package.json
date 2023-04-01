@@ -1,0 +1,28 @@
+{
+  "name": "chat-backend",
+  "version": "1.0.0",
+  "description": "Creating a chat application-backend",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "test "
+  },
+  "author": "aditya",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "^4.3.3",
+    "@graphql-tools/schema": "^9.0.16",
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "graphql": "^16.6.0",
+    "graphql-subscriptions": "^2.0.0",
+    "graphql-ws": "^5.11.3",
+    "http-status": "^1.6.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^6.9.1",
+    "nodemon": "^2.0.20",
+    "ws": "^8.12.0"
+  }
+}

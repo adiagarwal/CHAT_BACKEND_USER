@@ -1,0 +1,44 @@
+scalar JSON
+scalar Date
+
+type Response{
+    status:Int
+    msg:String
+    data:JSON
+}
+
+type participants{
+    _id: String,
+    username: String,
+    loggedIn: Boolean,
+    profilePic: String
+}
+
+type conversations{
+    id: String,
+    created_by: String,
+    is_active: Boolean,
+    numberOfParticipants: Int,
+    participants: [participants]
+}
+type allConversations{
+    convArray : [JSON]
+    count : Int
+}
+type Query{
+    getAllUsers:Response
+    getCurrentUser:Response
+    getAllConversationsForUser:JSON
+    getMessagesOfConversations(conversation_id :String):JSON
+}
+
+type Mutation{
+    createUserConversation(id : String!):Response
+    sendMessage(conversation_id:String , body:String):Response
+}
+
+type Subscription{
+    conversationCreated(user_id : String) : JSON
+    publishMessage: JSON
+}
+
